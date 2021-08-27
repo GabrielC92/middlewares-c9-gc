@@ -1,8 +1,12 @@
 module.exports = {
     index: (req,res) => {
-        return res.render('index');
+        return res.render('index',{
+            title: 'Home Page'
+        });
     },
     admin: (req,res) => {
-        return res.render('admin/admin');
+        return res.render('admin/admin',{
+            title: 'Admin'
+        });
     }
 }
