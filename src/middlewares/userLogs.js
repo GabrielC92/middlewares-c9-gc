@@ -1,10 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const rutasFilePath = path.join(__dirname,'..','logs','userLogs.txt');
-const rutas = JSON.parse(fs.readFileSync(rutasFilePath,'utf-8'));
 
-module.exports = {
-    historial: (req,res,next) => {
-        next();
-    }
+module.exports = (req,res,next) => {
+    fs.appendFileSync(rutasFilePath, `El usuario ingresó a la ruta: ${req.url}`, 'utf-8');
+    next();
 }
