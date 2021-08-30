@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
+app.use(userLogs);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
@@ -25,8 +26,9 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main');
+const usersRouter = require('./routes/users');
 app.use('/', mainRouter);
-app.use(userLogs);
+app.use('/users', usersRouter);
 
 
 // ************ DON'T TOUCH FROM HERE ************
