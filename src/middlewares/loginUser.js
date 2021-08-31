@@ -1,4 +1,4 @@
-const usuarios = ['Ada', 'Greta', 'Vim', 'Tim'];
+const admins = ['Ada', 'Greta', 'Vim', 'Tim'];
 
 module.exports = (req, res, next) => {
     if (admins.includes(req.query.user)) {

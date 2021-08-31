@@ -3,5 +3,29 @@
 <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
+    <main>
+        <form action="" method="POST">
+            <label for="name">Nombre y apellido:
+                <input type="text" name="name" id="name">
+            </label>
+
+            <label for="date">Fecha de nacimiento:
+                <input type="date" name="date" id="date">
+            </label>
+
+            <label for="user">Nombre de usuario:
+                <input type="text" name="user" id="user">
+            </label>
+
+            <label for="email">Ingrese su correo electrónico:
+                <input type="email" name="email" id="email">
+            </label>
+
+            <label for="password">Elegí tu contraseña:
+                <input type="password" name="password" id="password">
+            </label>
+        </form>
+    </main>
+    <img src="/images/node.jpg" width="60%">
 </body>
 </html>

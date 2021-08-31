@@ -3,5 +3,14 @@
 <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
+    <main>
+        <form action="/admin" method="GET">
+            <label for="user">Usuario:
+                <input type="text" name="user" id="user">
+            </label>
+            <button type="submit">Aceptar</button>
+        </form>
+    </main>
+    <img src="/images/node.jpg" width="60%">
 </body>
 </html>

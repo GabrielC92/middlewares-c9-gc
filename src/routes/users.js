@@ -4,6 +4,6 @@ const {register,login} = require('../controllers/usersController');
 const logMiddleware = require('../middlewares/loginUser');
 
 router.get('/registro', register);
-router.get('/login', logMiddleware, login);
+router.get('/login', login);
 
 module.exports = router;
