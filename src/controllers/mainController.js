@@ -6,7 +6,8 @@ module.exports = {
     },
     admin: (req,res) => {
         return res.render('admin/admin',{
-            title: 'Admin'
+            title: 'Admin',
+            msg: req.query ? req.query.user : null
         });
     }
 }

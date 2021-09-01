@@ -3,7 +3,9 @@
 <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
+    <h1 class="saludo-main">Crea tu cuenta</h1>
     <main>
+        <img src="/images/node.jpg" alt="node">
         <form action="" method="POST">
             <label for="name">Nombre y apellido:
                 <input type="text" name="name" id="name">
@@ -24,8 +26,8 @@
             <label for="password">Elegí tu contraseña:
                 <input type="password" name="password" id="password">
             </label>
+            <button type="submit">Registrarse</button>
         </form>
     </main>
-    <img src="/images/node.jpg" width="60%">
 </body>
 </html>

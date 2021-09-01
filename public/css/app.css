@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: lightgreen;
 }
 a{
   text-decoration: none;
@@ -16,30 +17,107 @@ li{
 /* header */
 header{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
 }
-header h1{
-  color: black;
+header .titulo-header{
+  color: white;
+  margin-top: 5px;
 }
 header nav{
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
 }
-header nav input{
+header nav input, header nav ul{
   display: none;
 }
 header nav input:checked ~ ul{
   display: block;
 }
 header nav label{
-  background-color: rgb(142, 150, 34);
-  color: black;
+  background-color: #0000ff;
+  color: white;
+  border: solid 2px white;
   border-radius: 5px;
-  font-size: 30px;
   padding: 5px;
+  margin: 10px 0;
 }
 header nav ul{
-  display: none;
   background-color: dodgerblue;
   width: 100%;
+}
+header nav ul li{
+  margin: 0 auto;
+  text-align: center;
+}
+header nav ul li .links{
+  color: white;
+}
+
+/* main */
+main{
+  background-color: #637fa0;
+  margin: 0 20px;
+  padding: 5px;
+}
+.saludo-main{
+  text-align: center;
+}
+main img{
+  width: 100%;
+}
+
+/* registro y login */
+form{
+  display: flex;
+  flex-flow: column wrap;
+}
+form label{
+  margin: 8px 5px;
+  font-style: oblique;
+}
+form label input{
+  margin-top: 4px;
+  width: 100%;
+}
+form button{
+  margin: 8px 5px;
+}
+
+@media (min-width: 768px) {
+  /* header */
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav{
+    flex-direction: row;
+    width: 40%;
+  }
+  header nav ul{
+    display: flex;
+    background-color: #0000ff;
+  }
+  header nav label{
+    display: none;
+  }
+  
+  /* main */
+  main{
+    display: flex;
+  }
+  main img{
+    width: 40%;
+    /* height: 202px; */
+    margin-left: 9px;
+  }
+
+  /* registro y login */
+  form{
+    width: 40%;
+    margin: auto;
+  }
 }

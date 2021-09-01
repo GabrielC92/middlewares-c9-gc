@@ -3,7 +3,9 @@
 <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
+    <h1 class="saludo-main">Inicia sesión</h1>
     <main>
+        <img src="/images/node.jpg" alt="node">
         <form action="/admin" method="GET">
             <label for="user">Usuario:
                 <input type="text" name="user" id="user">
@@ -11,6 +13,5 @@
             <button type="submit">Aceptar</button>
         </form>
     </main>
-    <img src="/images/node.jpg" width="60%">
 </body>
 </html>
